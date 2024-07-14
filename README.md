@@ -20,12 +20,12 @@ OnePageShop é um projeto de demonstração desenvolvido com Javascript, React e
 
 1. Clone o repositório:
     ```bash
-    git clone https://github.com/seu-usuario/product-showcase-pro.git
+    git clone https://github.com/joaopedrocabral-sp/product-showcase-pro.git
     ```
 
 2. Navegue até o diretório do projeto:
     ```bash
-    cd product-showcase-pro
+    cd OnePageShop
     ```
 
 3. Instale as dependências:
@@ -35,32 +35,28 @@ OnePageShop é um projeto de demonstração desenvolvido com Javascript, React e
 
 4. Configure o Firebase:
     - Crie um novo projeto no Firebase.
-    - Adicione as configurações do Firebase no arquivo `.env` (você pode usar o arquivo `.env.example` como base):
+    - Adicione as configurações do Firebase no arquivo `.env`:
         ```env
-        REACT_APP_FIREBASE_API_KEY=your_api_key
-        REACT_APP_FIREBASE_AUTH_DOMAIN=your_project_id.firebaseapp.com
-        REACT_APP_FIREBASE_PROJECT_ID=your_project_id
-        REACT_APP_FIREBASE_STORAGE_BUCKET=your_project_id.appspot.com
-        REACT_APP_FIREBASE_MESSAGING_SENDER_ID=your_messaging_sender_id
-        REACT_APP_FIREBASE_APP_ID=your_app_id
+        VITE_API_KEY=your_api_key
+        VITE_AUTH_DOMAIN=your_project_id.firebaseapp.com
+        VITE_PROJECT_ID=your_project_id
+        VITE_STORAGE_BUCKET=your_project_id.appspot.com
+        VITE_MESSAGING_SENDER_ID=your_messaging_sender_id
+        VITE_APP_ID=your_app_id
         ```
 
 5. Inicie o servidor de desenvolvimento:
     ```bash
-    npm start
+    npm run dev
     ```
 
 ## Uso
 
-1. **Vitrine de Produtos**: Acesse a página principal para ver os produtos disponíveis.
+1. **Página Inicial**: Acesse a página inicial para ver os produtos disponíveis.
 2. **Administração**: Faça login na página de administração para gerenciar os produtos.
 3. **Adição de Produtos**: Utilize o formulário na página de administração para adicionar novos produtos.
 4. **Edição de Produtos**: Edite as informações dos produtos existentes na página de administração.
 5. **Remoção de Produtos**: Remova produtos da vitrine diretamente pela página de administração.
-
-## Contribuição
-
-Contribuições são bem-vindas! Sinta-se à vontade para abrir issues ou enviar pull requests.
 
 ## Licença
 
