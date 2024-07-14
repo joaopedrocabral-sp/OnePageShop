@@ -12,15 +12,15 @@ OnePageShop é um projeto de demonstração desenvolvido com Javascript, React e
 ## Tecnologias Utilizadas
 
 - **Frontend**: React
-- **Backend**: Firebase (Firestore, Authentication)
+- **Backend**: Firebase (Firestore, Authentication, Storage)
 - **Linguagem**: Javascript
-- **Estilização**: CSS
+- **Estilização**: Styled Components
 
 ## Instalação
 
 1. Clone o repositório:
     ```bash
-    git clone https://github.com/joaopedrocabral-sp/product-showcase-pro.git
+    git clone https://github.com/joaopedrocabral-sp/OnePageShop.git
     ```
 
 2. Navegue até o diretório do projeto:
