@@ -9,10 +9,22 @@ export const HeaderContainer = styled.header`
     background-color: ${props => props.theme.color.purple.primary};
 
     & div{
+
+        gap: 10px;
+
         & p{
-            font-size: 26px;
+            font-size: 28px;
             font-weight: 900;
             color: ${props => props.theme.color.white};
+
+            @media (max-width: 767px){
+                font-size: 24px;
+            }
         }
     }
+`
+
+export const ExitButton = styled.button`
+    color: ${props => props.theme.color.purple.primary};
+    padding: 12px 20px;
 `

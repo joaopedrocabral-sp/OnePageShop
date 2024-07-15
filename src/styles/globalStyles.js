@@ -58,21 +58,71 @@ export const MyGlobalStyles = createGlobalStyle`
         grid-template-rows: auto;
         justify-items: center;
         align-items: center;
+        grid-gap: 50px;
     }
-
-
+    h2{
+        font-family: "MontSerrat";
+        font-size: 40px;
+        font-weight: 800;
+        text-transform: uppercase;
+    }
+    h3{
+        font-size: 22px;
+        font-weight: 600;
+    }
     a{
         text-decoration: none;
     }
     a:hover{
         
     }
+    p{
+        font-family: "Poppins";
+        font-size: 20px;
+    }
     button{
         text-transform: uppercase;
-        font-weight: 600;
+        font-weight: 700;
         border-radius: 30px;
         border: none;
         cursor: pointer;
+    }
+    .price{
+        font-size: 18px;
+    }
+
+    @media (max-width: 767px){
+        .header-boxed{
+            padding: 20px 15px;
+        }
+        .section-boxed{
+            padding: 50px 15px;
+        }
+        .section-boxed-thin{
+            padding: 50px 15px;
+        }
+        .flex-container-2{
+            justify-content: center;
+        }
+        .mobileHidden{
+            display: none;
+        }
+        .grid-container-3{
+            grid-template-columns: 1fr;
+            grid-gap: 50px;
+        }
+        .price{
+            font-size: 16px;
+        }
+        h2{
+            font-size: 30px;
+        }
+        h3{
+            font-size: 18px;
+        }
+        p{
+        font-size: 18px;
+        }
     }
 
 `

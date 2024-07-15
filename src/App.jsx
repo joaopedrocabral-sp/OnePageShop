@@ -14,8 +14,7 @@ export function App(){
         <>
             <ThemeProvider theme={themeMode}>
                 <MyGlobalStyles />
-                <Header theme={theme} themeToggler={themeToggler} />
-                <AppRoutes />
+                <AppRoutes theme={theme} themeToggler={themeToggler}  />
             </ThemeProvider>
         </>
     )

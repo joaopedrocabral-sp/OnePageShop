@@ -6,5 +6,11 @@ export const Button = styled.button`
     
     & svg{
         fill: ${props => props.theme.color.backgroundColor};
+        font-size: 26px;
+        margin-top: 4px;
+
+        @media (max-width: 767px){
+            width: 20px;
+        }
     }
 `

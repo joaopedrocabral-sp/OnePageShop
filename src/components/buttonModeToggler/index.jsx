@@ -5,9 +5,9 @@ export function ButtonModeToggler({theme, themeToggler}) {
     return (
         <Button onClick={themeToggler}>
             {theme == "light" ? (
-                <MdOutlineDarkMode style={{ fontSize: "30px", marginTop: "4px" }} />
+                <MdOutlineDarkMode />
             ) : (
-                <MdOutlineLightMode style={{ fontSize: "30px", marginTop: "4px" }} />
+                <MdOutlineLightMode />
             )}
         </Button>
     )
