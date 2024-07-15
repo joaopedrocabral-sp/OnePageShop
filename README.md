@@ -2,6 +2,18 @@
 
 OnePageShop é um projeto de demonstração desenvolvido com Javascript, React e Firebase. Este projeto serve como uma vitrine empresarial de produtos, oferecendo uma interface intuitiva e fácil de usar para a exibição e gerenciamento de produtos. O site inclui uma página de administração que permite adicionar, editar e remover produtos.
 
+## Índice
+
+- [Telas](#telas)
+  - [Home](#home)
+  - [Admin](#admin)
+  - [Add](#add)
+- [Funcionalidades](#funcionalidades)
+- [Tecnologias Utilizadas](#tecnologias-utilizadas)
+- [Instalação](#instalação)
+- [Uso](#uso)
+- [Licença](#licença)
+
 ## Telas
 
 ### Home
