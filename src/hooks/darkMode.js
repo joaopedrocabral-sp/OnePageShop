@@ -12,7 +12,7 @@ export const toggleMode = () => {
         theme == "light" ? setMode("dark") : setMode("light")
     }
 
-    useEffect(() =>{
+    useEffect(() => {
         const localTheme = window.localStorage.getItem("theme")
         localTheme && setTheme(localTheme)
     }, [])

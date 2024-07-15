@@ -4,7 +4,7 @@ import { Login } from "./pages/login";
 import { Header } from "./components/header";
 import { Admin } from "./pages/admin";
 
-export function AppRoutes({theme, themeToggler}) {
+export function AppRoutes({ theme, themeToggler }) {
     return (
         <BrowserRouter>
             <Header theme={theme} themeToggler={themeToggler} />

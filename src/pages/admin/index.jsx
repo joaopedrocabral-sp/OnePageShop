@@ -6,6 +6,7 @@ import { collection, getDocs, doc, deleteDoc } from 'firebase/firestore';
 import { deleteObject, ref } from 'firebase/storage';
 import { EditProductForm } from "../../components/editProduct";
 import { AddProduct } from "../../components/addProduct";
+import { formatCurrency } from "../../hooks/formatCurrency";
 
 export function Admin() {
 
@@ -95,41 +96,41 @@ export function Admin() {
                         />
                     ) : (
                         <>
-                        <AddProductButton onClick={handleAdd}>Adicionar Produto</AddProductButton>
-                        <h2>Lista de Produtos</h2>
-                        <div className="grid-container-3 w-65 gap-50">
-                            
-                            {products.map((product) => (
-                                <ProductContainer key={product.id}>
-                                    {product.imageUrl && (
-                                        <img
-                                            src={product.imageUrl}
-                                            alt={product.name}
-                                        />
-                                    )}
-                                    <h3>{product.name}</h3>
-                                    <p className="price">Preço: R$ {product.price}</p>
-                                    <br />
-                                    <EditButton
-                                        className="mb-10"
-                                        onClick={() => handleEdit(product)}
-                                    >
-                                        Editar
-                                    </EditButton>
-                                    <br />
-                                    <DeleteButton
-                                        onClick={() =>
-                                            handleDelete(
-                                                product.id,
-                                                product.imageUrl
-                                            )
-                                        }
-                                    >
-                                        Excluir
-                                    </DeleteButton>
-                                </ProductContainer>
-                            ))}
-                        </div>
+                            <AddProductButton onClick={handleAdd}>Adicionar Produto</AddProductButton>
+                            <h2>Lista de Produtos</h2>
+                            <div className="grid-container-3 w-65 gap-50">
+
+                                {products.map((product) => (
+                                    <ProductContainer key={product.id}>
+                                        {product.imageUrl && (
+                                            <img
+                                                src={product.imageUrl}
+                                                alt={product.name}
+                                            />
+                                        )}
+                                        <h3>{product.name}</h3>
+                                        <p className="price">Preço: {formatCurrency(product.price)}</p>
+                                        <br />
+                                        <EditButton
+                                            className="mb-10"
+                                            onClick={() => handleEdit(product)}
+                                        >
+                                            Editar
+                                        </EditButton>
+                                        <br />
+                                        <DeleteButton
+                                            onClick={() =>
+                                                handleDelete(
+                                                    product.id,
+                                                    product.imageUrl
+                                                )
+                                            }
+                                        >
+                                            Excluir
+                                        </DeleteButton>
+                                    </ProductContainer>
+                                ))}
+                            </div>
                         </>
                     )}
                 </div>

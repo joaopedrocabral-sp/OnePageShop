@@ -18,7 +18,7 @@ export function EditProductForm({ product, onSave, onCancel }) {
         let imageUrl = product.imageUrl
 
         if (imageFile) {
-            setUploading(true);
+            setUploading(true)
             const imageRef = ref(storage, `products/${imageFile.name}`)
             const uploadTask = uploadBytesResumable(imageRef, imageFile)
 

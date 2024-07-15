@@ -4,6 +4,8 @@ import { collection, getDocs } from 'firebase/firestore';
 import { db } from "../../services/firebaseConfig";
 import heroImage from "../../assets/hero-image.jpg";
 import { WhatsAppButton } from "../../components/whatsappButton";
+import { formatCurrency } from "../../hooks/formatCurrency";
+
 
 export function Home() {
 
@@ -23,6 +25,7 @@ export function Home() {
         setProducts(productsList)
     }
 
+
     return (
         <>
             <HeroSection id="hero-img">
@@ -36,21 +39,21 @@ export function Home() {
                 <div className="section-boxed flex-container">
                     <h2>Produtos</h2>
                     <div className="grid-container-3">
-                            
-                            {products.map((product) => (
-                                <ProductContainer key={product.id}>
-                                    {product.imageUrl && (
-                                        <img
-                                            src={product.imageUrl}
-                                            alt={product.name}
-                                        />
-                                    )}
-                                    <h3>{product.name}</h3>
-                                    <p className="price">R$ {product.price}</p>
-                                    <button><a href="https://github.com/joaopedrocabral-sp" target="_blank">Comprar</a></button>
-                                </ProductContainer>
-                            ))}
-                        </div>
+
+                        {products.map((product) => (
+                            <ProductContainer key={product.id}>
+                                {product.imageUrl && (
+                                    <img
+                                        src={product.imageUrl}
+                                        alt={product.name}
+                                    />
+                                )}
+                                <h3>{product.name}</h3>
+                                <p className="price">{formatCurrency(product.price)}</p>
+                                <button><a href="https://github.com/joaopedrocabral-sp" target="_blank">Comprar</a></button>
+                            </ProductContainer>
+                        ))}
+                    </div>
                 </div>
             </StandardSection>
             <WhatsAppButton />

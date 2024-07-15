@@ -39,11 +39,11 @@ export function Login() {
         return <div>Loading...</div>
     }
 
-    if (userLogged){
+    if (userLogged) {
         window.location.assign("/admin")
     }
 
-    else if(userLogged === ""){
+    else if (userLogged === "") {
         return (
             <div className="section-boxed-thin flex-container">
                 <FormContainer onSubmit={loginHandler}>

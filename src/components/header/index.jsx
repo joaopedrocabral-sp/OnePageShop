@@ -38,13 +38,13 @@ export function Header({ theme, themeToggler }) {
                 </div>
             </HeaderContainer>
         )
-    } else if(userLogged){
-        return(
+    } else if (userLogged) {
+        return (
             <HeaderContainer>
                 <div className="header-boxed header-flex-container">
                     <p>OnePageShop</p>
                     <div className="row-flex-container">
-                        
+
                         <ButtonModeToggler theme={theme} themeToggler={themeToggler} />
                         <ExitButton onClick={() => signOut(auth)}>Sair</ExitButton>
                     </div>

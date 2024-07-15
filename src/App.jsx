@@ -6,15 +6,15 @@ import { MyGlobalStyles } from "./styles/globalStyles";
 import { AppRoutes } from "./routes";
 import { Header } from "./components/header";
 
-export function App(){
+export function App() {
     const [theme, themeToggler] = toggleMode();
     const themeMode = theme == "light" ? lightTheme : darkTheme;
 
-    return(
+    return (
         <>
             <ThemeProvider theme={themeMode}>
                 <MyGlobalStyles />
-                <AppRoutes theme={theme} themeToggler={themeToggler}  />
+                <AppRoutes theme={theme} themeToggler={themeToggler} />
             </ThemeProvider>
         </>
     )
