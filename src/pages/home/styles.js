@@ -77,5 +77,9 @@ export const ProductContainer = styled.div`
         &:hover{
             background-color: ${props => props.theme.color.purple.primary};  
         }
+
+        & a{
+            color: ${props => props.theme.color.white};  
+        }
     }
 `
